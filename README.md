@@ -1,2 +1,2 @@
 # PSSnippets
-PowerShell Snippets
+Collection of PowerShell Snippets
