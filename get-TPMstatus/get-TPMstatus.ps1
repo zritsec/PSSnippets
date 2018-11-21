@@ -17,4 +17,4 @@
 # ------------------------------------------------------------------------------------------------------
 
 $pcName = "MyComputer"
-gwmi -ComputerName $pcName -class Lenovo_BiosSetting -namespace root\wmi | ForEach-Object{if ($_.CurrentSetting -like "SecurityChip*") {Write-Host $_.CurrentSetting.replace(","," = ")}}
+gwmi -ComputerName $pcName -class Lenovo_BiosSetting -namespace root\wmi | ForEach-Object{if ($_.CurrentSetting -like "SecurityChip*") {return $_.CurrentSetting.replace(","," = ")}}
